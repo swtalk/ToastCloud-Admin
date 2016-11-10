@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="sampleBatchMapper">
+    <select id="selectItems" parameterType="com.toast.exercise.domain.SampleBatchVO" resultType="com.toast.exercise.domain.SampleBatchVO">
+        <![CDATA[
+            SELECT ITEM_ID AS itemId,
+                   ITEM_NAME AS itemName,
+                   PRICE,
+                   DESCN
+              FROM EX_ITEM_TBL_ORG
+             LIMIT #{_skiprows}, #{_pagesize}
+         ]]>
+    </select>
+    
+    <insert id="insertItem" parameterType="com.toast.exercise.domain.SampleBatchVO">
+        <![CDATA[
+            INSERT INTO EX_ITEM_TBL
+                   (ITEM_ID,
+                    ITEM_NAME,
+                    PRICE,
+                    DESCN,
+                    CREATED_AT,
+                    CREATED_ID
+                   )
+            VALUES (#{itemId},
+                    #{itemName},
+                    #{price},
+                    #{descn},
+                    now(),
+                    #{createdId}
+                   )
+         ]]>
+    </insert>
+    
+    <delete id="deleteItems" parameterType="Hashmap">
+        <![CDATA[
+            DELETE
+              FROM EX_ITEM_TBL
+             WHERE ITEM_ID LIKE #{itemId}
+         ]]>
+    </delete>
+</mapper>
