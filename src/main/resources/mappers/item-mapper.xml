@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
 <mapper namespace="itemMapper">
+
+    <select id="selectItemList" parameterType="hashmap" resultType="com.toast.exercise.domain.ItemVO">
+        <![CDATA[
+            SELECT ITEM_ID AS itemId,
+                   ITEM_NAME AS itemName,
+                   PRICE,
+                   DESCN
+              FROM EX_ITEM_TBL
+             ORDER BY ITEM_ID
+         ]]>
+    </select>
+    
+    <select id="selectTotalCount" parameterType="hashmap" resultType="int">
+        <![CDATA[
+            SELECT COUNT(ITEM_ID) AS TOTAL_CNT
+              FROM EX_ITEM_TBL
+         ]]>
+    </select>
+    
+    <insert id="insertItems" parameterType="hashMap">
+        <![CDATA[
+            INSERT
+              INTO EX_ITEM_TBL
+                   (ITEM_ID,
+                    ITEM_NAME,
+                    PRICE,
+                    DESCN,
+                    CREATED_ID,
+                    CREATED_AT)
+            VALUES (#{itemId},
+                    #{itemName},
+                    #{price},
+                    #{descn},
+                    #{userId},
+                    now())
+         ]]>
+    </insert>
+    
+    <update id="updateItem" parameterType="hashMap">
+        <![CDATA[
+            UPDATE EX_ITEM_TBL
+               SET ITEM_NAME = #{itemName},
+                   PRICE = #{price},
+                   DESCN = #{descn},
+                   UPDATED_ID = #{userId},
+                   UPDATED_AT = now()
+             WHERE ITEM_ID = #{itemId}
+         ]]>
+    </update>
+    
+    <delete id="deleteItems" parameterType="hashmap">
+        <![CDATA[
+            DELETE 
+              FROM EX_ITEM_TBL
+             WHERE ITEM_ID IN
+         ]]>
+               <foreach collection="deleteIds" item="id" open="(" separator="," close=")">
+                    #{id}
+               </foreach>
+         
+    </delete>
 
 </mapper>
