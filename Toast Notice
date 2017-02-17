@@ -1,0 +1,161 @@
+<p style="font-size: 14px;">
+안녕하세요 TOAST Cloud 입니다.
+</p>
+<p style="font-size: 14px;">
+TOAST Cloud 상품 기능개선을 위한 점검이 02월 23일(목) 진행됩니다.<br>
+서비스 영향도는 부분 정지로 빠른 시간 내 작업이 완료될 수 있도록 노력하겠습니다.<br><br>감사합니다.
+</p>
+<br>
+<b>[일시]</b>
+<p style="font-size: 14px; margin-top: 0px;">
+2016년 02월 23일 06:00 ~ 10:00 (4시간)
+</p><p>
+<span>
+<b>[상세 내용]</b>
+</span>
+<table style="text-align: center;font-size: 14px;margin: 2px 0px 14px;padding: 0px;border: 0px;/* line-height: initial; */font-family: &quot;Apple SD 산돌고딕 Neo&quot;, -apple-system, &quot;Lucida Grande&quot;, &quot;Apple SD Gothic Neo&quot;, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Segoe UI&quot;, 돋움, dotum, sans-serif;width: 1107.41px;color: rgb(85, 85, 85);background-color: rgb(255, 255, 255);width: 100%;">
+<thead><tr>
+<th style="width: 20%;">상품명</th>
+<th style="width: 20%;">영향도</th>
+<th>상세 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compute & Networks</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [LoadBalancer] 등록된 리스터가 1개일 경우 삭제할 수 없는 메시지 안내추가<br>
+* [Floating IP] Floating IP 삭제 시 인스턴스 or 로드밸런서가 연결되어 있을 경우 삭제 불가<br>
+</td>
+</tr>
+<tr>
+<td>Push</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[버그 수정]</b><br>
+* [API] 발송 기간이 한 달 이상인 예약 메시지 발송 안되는 오류 수정 <br>
+* [Android SDK] 빌드시 Warning 로그 노출되지 않도록 수정 <br>
+* [iOS SDK] 토큰 리프레쉬 과정에서 크래시나는 현상 수정
+</td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[버그 수정]</b><br>
+* [Console] MMS 대량 발송 조회 시 발송 건수 오류로 pagination 비정상 작동오류 수정<br>
+</td>
+</tr>
+<tr>
+<td>IAP</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [Console] 명칭 변경(Market > Store) <br>
+* [Console] 결제내역 조회시 결제번호(ID 컬럼) 정렬 기능 추가 <br><br>
+<b>[버그 수정]</b><br>
+* [SDK] 미처리 결제건 일괄 재처리시 앱 크래시 현상 수정<br>
+* [SDK] 구매 가능한 아이템 조회시 잘못된 응답값이 내려가는 문제 수정<br>
+</td>
+</tr>
+<tr>
+<td>LeaderBoard</td>
+<td>정지<br>* 08:00~08:20</td></td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [Console] 팩터 추가 시 주기가 'Total' 인 경우 팩터 리셋 시간 노출되지 않도록 변경 <br>
+* [Console] 유저 ID별 랭킹 조회 시 과거 주기도 검색될 수 있도록 기능 추가 <br><br>
+<b>[버그 수정]</b><br>
+* [Console] 다수의 랭킹 데이터 삭제 요청시 웹 페이지 동작이 멈추는 버그 수정 <br>
+<br>
+</td>
+</tr>
+<tr>
+<td>Log & Crash Search</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [API] log Bulk upload 기능 추가<br>
+* [API] long,double 옵션 추가 <br>
+* [SDK] CrashCallback 기능 추가<br><br>
+<b>[버그 수정]</b><br>
+* [Console] 저장된 쿼리 보기 페이지에서 쿼리 삭제 불가능한 문제 수정<br>
+* [Console] 이슈 상세에서 뒤로가기 클릭시 목록 첫페이지로 이동하지 않도록 pagination 개선 <br>
+* [SDK] Thread간의 충돌 현상 수정 <br>
+* [SDK] 일부 기기에서 breakpad 의 작업이 완료되기 전 어플리케이션이 강제로 종료 되는 현상 수정 <br>
+</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>서버 안정화 작업</b><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<b>[Upcoming Products]</b>
+<table style="text-align: center;font-size: 14px;margin: 2px 0px 14px;padding: 0px;border: 0px;/* line-height: initial; */font-family: &quot;Apple SD 산돌고딕 Neo&quot;, -apple-system, &quot;Lucida Grande&quot;, &quot;Apple SD Gothic Neo&quot;, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Segoe UI&quot;, 돋움, dotum, sans-serif;width: 1107.41px;color: rgb(85, 85, 85);background-color: rgb(255, 255, 255);width: 100%;">
+<thead><tr>
+<th style="width: 20%;">상품명</th>
+<th style="width: 20%;">영향도</th>
+<th>상세 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API GW</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [Console] Maintenance 플러그인 기능 추가<br>
+<br>
+<b>[버그 수정]</b><br>
+* [Console] 특정 Domain Deploy가 실패하는 오류 수정<br>
+</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [Console] 일반 발송 수신자 수 제한<br>
+* [Console] 첨부파일 업로드 및 발송 용량 제한<br>
+* [API] 일반/개별 메일발송 수신자 수 제한<br>
+* [API] 첨부파일 업로드 용량 제한<br> 
+* [API] 첨부파일 포함된 메일 발송 용량 제한 <br>
+ <br>
+<b>[버그 수정]</b><br>
+* [Console] 익월날짜에 예약 발송 시 정상적으로 발송이 안되는 현상 수정<br>
+* [Console] 본문 내 이미지 추가 시 Width가 변경되는 현상 수정<br>
+* [Console] 템플릿으로 메일검색 이후 초기화 시 템플릿 검색 조건이 사라지지 않는 버그 수정 <br>
+* [Console] 유효하지 않는 카테고리 ID로 템플릿 등록 시 정상적으로 등록되는 현상 수정
+</td>
+</tr>
+<tr>
+<td>Smart Downloader</td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>[기능 개선/변경]</b><br>
+* [Console] 각 페이지에 접근 할 수 있는 탭 추가<br>
+* [Console] 다운로드 상세 검색시 대상 데이터가 많은 경우, 검색 항목 재설정 기능 추가<br>
+* [Console] 다운로드 상세 검색시 다운로드 실패만 선택한 경우 '다운로드 시간/속도' 항목은 선택 안되도록 수정<br>
+* [SDK] class Name 변경 (DLCSkin -> SmartDLUnitySkin) <br>
+* [SDK] Only static API 제공 <br>
+<br>
+<b>[버그 수정]</b><br>
+* [Console] 특정 Domain Deploy가 실패하는 오류 수정<br>
+</td>
+</tr>
+<tr>
+<td>DNS+<br>Event<br></td>
+<td>무정지</td>
+<td style="text-align: left;font-size: 13px;">
+<b>서버 안정화 작업</b><br>
+</td>
+</tr>
+</tbody>
+</table>
